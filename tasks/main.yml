@@ -1,0 +1,7 @@
+---
+# tasks file for Proxmox_VMs_destroy_k3s
+- name: Test proxmox
+  ansible.builtin.import_tasks: task_1_preinit.yml
+  
+- name: Destroy VMs
+  ansible.builtin.import_tasks: task_2_destroy_vm.yml
