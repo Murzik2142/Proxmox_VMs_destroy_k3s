@@ -14,7 +14,7 @@ Not tested on earlier versions
 Role Variables
 --------------
 ```
-# defaults file for Proxmox_VMs_stop_k3s
+# defaults file for Proxmox_VMs_destroy_k3s
 proxmox_api_host: "127.0.0.1"
 proxmox_api_user: "root@pam"
 proxmox_api_password: "password"
@@ -35,8 +35,8 @@ Example Playbook
 ----------------
 
 ```
-# ansible-playbook -i inventory.yml playbook-VMs-stop-k3s.yaml
-- name: Stop VMs in Proxmox
+# ansible-playbook -i inventory.yml playbook-VMs-destroy-k3s.yaml
+- name: Destroy VMs in Proxmox
   hosts: proxmox
   vars:
     proxmox_api_host: "proxmox1.home.local"
