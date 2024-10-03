@@ -1,4 +1,4 @@
-- name: Stop VM server
+- name: Destroy VM server
   ignore_errors: true
   community.general.proxmox_kvm:
     api_user: "{{ proxmox_api_user }}"
@@ -9,7 +9,7 @@
     state: absent
   loop: "{{ groups['k3s-master'] }}"
 
-- name: Stop VM worker
+- name: Destroy VM worker
   ignore_errors: true
   community.general.proxmox_kvm:
     api_user: "{{ proxmox_api_user }}"
